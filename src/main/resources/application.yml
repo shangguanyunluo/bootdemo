@@ -1,0 +1,16 @@
+server: 
+  port: 80
+  servlet:
+    context-path: /cloudlab  #Context path of the application.
+#    path: /auth  #//extends WebMvcConfigurationSupport 
+    
+spring:
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+    
+    
+name: zhangsan
+message: my name is ${name}
+people: 
+  name: ${name}
+  age: 23
