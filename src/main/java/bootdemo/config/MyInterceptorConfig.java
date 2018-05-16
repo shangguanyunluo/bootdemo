@@ -9,13 +9,13 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import bootdemo.interceptor.MyInterceptor;
 
 @Configuration
 @EnableWebMvc
-public class MyInterceptorConfig implements WebMvcConfigurer {
+public class MyInterceptorConfig extends WebMvcConfigurationSupport {
 	@Autowired
 	private MyInterceptor myInterceptor;
 
